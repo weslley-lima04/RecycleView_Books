@@ -30,16 +30,19 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
     {
+        //inflando o modelo do layout
         View view;
         LayoutInflater inflater = LayoutInflater.from(context);
         view = inflater.inflate(R.layout.modelo_card_books, parent, false);
 
-        return null;
+        return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position)
+    {
+        holder.txtModeloLivros.setText(books.get(position).getTitulo());
+        holder.imgModeloLivros.setImageResource(books.get(position).getMiniatura());
     }
 
     @Override

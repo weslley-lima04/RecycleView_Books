@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         listaLivros.hasFixedSize();
 
         //carregar o adaptador ao RecyclerView
-        //listaLivros.setAdapter();
+        listaLivros.setAdapter(adapter);
 
     }
 }
