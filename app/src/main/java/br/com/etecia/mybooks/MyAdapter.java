@@ -1,15 +1,19 @@
 package br.com.etecia.mybooks;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
+public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
     private Context context;
     private List<Books> books;
@@ -24,7 +28,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
+    {
+        View view;
+        LayoutInflater inflater = LayoutInflater.from(context);
+        view = inflater.inflate(R.layout.modelo_card_books, parent, false);
+
         return null;
     }
 
@@ -35,17 +44,24 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
 
     @Override
     public int getItemCount() {
-        return 0;
+        return books.size();
     }
 
     //Inner class com o ViewlHolder
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder {
 
-        public ViewHolder(@NonNull View itemView) {
+        CardView idCardLivros;
+        TextView txtModeloLivros;
+        ImageView imgModeloLivros;
+
+        public ViewHolder(@NonNull View itemView)
+        {
             super(itemView);
+            idCardLivros = itemView.findViewById(R.id.idCardLivros);
+            txtModeloLivros = itemView.findViewById(R.id.txtModeloLivro);
+            imgModeloLivros = itemView.findViewById(R.id.imgModeloLivro);
         }
     }
-
 
 
 }

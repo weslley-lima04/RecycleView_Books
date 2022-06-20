@@ -20,7 +20,7 @@
             android:layout_height="160dp"
             android:layout_marginTop="5dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/kafka" />
+            android:src="@drawable/iracema" />
 
         <TextView
             android:id="@+id/txtModeloLivro"
@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="2sp"
-            android:text="Metamorfose"
+            android:text="Iracema"
             android:textColor="#000"
             android:textSize="10sp"
             android:textStyle="bold" />
