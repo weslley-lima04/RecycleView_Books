@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyBooks">
         <activity
+            android:name=".BookActivity"
+            android:exported="false" android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
